@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="App">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Best Wish</title>
+</head>
+
+
+<body>
+    
+    <nav ng-controller="AuthCtrl">
+        <button class="SignInFacebook">
+            <a href="#!/">Home</a>
+        </button>
+
+        <!-- added code for contact -->
+        <button class="SignInFacebook">
+            <a href="#!/contact">Contact</a>
+        </button>
+
+        <button class="SignInFacebook">
+            <a href="#!/sign-up">Sign up</a>
+        </button>
+        
+
+    </nav>
+
+    <div ng-view></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://code.angularjs.org/1.6.9/angular-route.js"></script>
+<!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/3.6.6/firebase.js"></script>
+
+<!-- AngularFire -->
+<script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+
+    <script src="app.js"></script>
+    <script src="controllers.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+          apiKey: "AIzaSyAOOpoXvcwlQLOTPHmuwrJGJee4XbMh4Tk",
+          authDomain: "facebooklogin-afda1.firebaseapp.com",
+          databaseURL: "https://facebooklogin-afda1.firebaseio.com",
+          projectId: "facebooklogin-afda1",
+          storageBucket: "facebooklogin-afda1.appspot.com",
+          messagingSenderId: "791445939896"
+        };
+        firebase.initializeApp(config);
+      </script>
+
+<!-- Add Google Maps -->
+  <script>
+    function myMap()
+    {
+      myCenter=new google.maps.LatLng(41.878114, -87.629798);
+      var mapOptions= {
+        center:myCenter,
+        zoom:12, scrollwheel: false, draggable: false,
+        mapTypeId:google.maps.MapTypeId.ROADMAP
+      };
+      var map=new google.maps.Map(document.getElementById("googleMap"),mapOptions);
+    
+      var marker = new google.maps.Marker({
+        position: myCenter,
+      });
+      marker.setMap(map);
+    }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcKUPXfTnlL8pz41Ns-EgLVz1Iss8dZfo&callback=myMap"></script>
+    <!--
+</body>
+
+</html>
