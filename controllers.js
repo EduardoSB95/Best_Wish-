@@ -35,3 +35,9 @@ app.controller('ContactController', [
   '$location',
   function($scope, $location) {}
 ]);
+
+app.controller('itemsController', [
+  '$scope',
+  '$location',
+  function($scope, $location) {}
+]);
