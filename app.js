@@ -155,3 +155,11 @@ for (let i = 0; i < products.length; i++) {
       '</p></div><div class="btn"><a href="#">Buy</a></div></div>'
   );
 }
+
+var map;
+function initMap() {
+  map = new google.maps.Map(document.getElementById('map'), {
+    center: { lat: -34.397, lng: 150.644 },
+    zoom: 8
+  });
+}

@@ -9,8 +9,17 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
-    <title>Best Wish</title>
+    <title>Webshop</title>
 </head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115160320-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-115160320-1');
+    </script>
+
 
 
 <body>
@@ -66,22 +75,10 @@
       </script>
 
 <!-- Add Google Maps -->
-<div class="textAk">
-    <div class="googleMap">
-        <div id="map"></div>
-        <script>
-            function initMap() {
-                var location = { lat: 38.871857, lng: -77.056267 };
-                var map = new google.maps.Map(document.getElementById("map"), {
-                    zoom: 14,
-                    center: location
-                });
-            }
-        </script>
-        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcKUPXfTnlL8pz41Ns-EgLVz1Iss8dZfo&callback=initMap"></script>
-        <p>Washington, DC 22202, USA</p>
-    </div>
-  </div>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcKUPXfTnlL8pz41Ns-EgLVz1Iss8dZfo&callback=initMap"
+async defer></script>
+
 <!-- Add Google Maps -->
   <!--<script>
     function myMap()

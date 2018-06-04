@@ -85,8 +85,8 @@ nav {
 }
 
 #map { /* Map adjustments */
-    height: 200px;
-    width: 320px;
+    height: 400px;
+    width: 100%;
     border-radius: 3px;
 }
 
