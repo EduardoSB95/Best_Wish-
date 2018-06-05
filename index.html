@@ -11,19 +11,19 @@
     <link rel="stylesheet" href="style.css">
     <title>Webshop</title>
 </head>
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115160320-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-120301100-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-        gtag('config', 'UA-115160320-1');
-    </script>
-
+    gtag('config', 'UA-120301100-1');
+</script>
 
 
 <body>
-    
+
     <nav ng-controller="AuthCtrl">
         <button class="SignInFacebook">
             <a href="#!/">Home</a>
@@ -41,7 +41,7 @@
         <button class="SignInFacebook">
             <a href="#!/items">Items</a>
         </button>
-        
+
 
     </nav>
 
@@ -53,34 +53,34 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <script src="https://code.angularjs.org/1.6.9/angular-route.js"></script>
-<!-- Firebase -->
+    <!-- Firebase -->
     <script src="https://www.gstatic.com/firebasejs/3.6.6/firebase.js"></script>
 
-<!-- AngularFire -->
-<script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+    <!-- AngularFire -->
+    <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
 
     <script src="app.js"></script>
     <script src="controllers.js"></script>
     <script>
         // Initialize Firebase
         var config = {
-          apiKey: "AIzaSyAOOpoXvcwlQLOTPHmuwrJGJee4XbMh4Tk",
-          authDomain: "facebooklogin-afda1.firebaseapp.com",
-          databaseURL: "https://facebooklogin-afda1.firebaseio.com",
-          projectId: "facebooklogin-afda1",
-          storageBucket: "facebooklogin-afda1.appspot.com",
-          messagingSenderId: "791445939896"
+            apiKey: "AIzaSyAOOpoXvcwlQLOTPHmuwrJGJee4XbMh4Tk",
+            authDomain: "facebooklogin-afda1.firebaseapp.com",
+            databaseURL: "https://facebooklogin-afda1.firebaseio.com",
+            projectId: "facebooklogin-afda1",
+            storageBucket: "facebooklogin-afda1.appspot.com",
+            messagingSenderId: "791445939896"
         };
         firebase.initializeApp(config);
-      </script>
+    </script>
 
-<!-- Add Google Maps -->
+    <!-- Add Google Maps -->
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcKUPXfTnlL8pz41Ns-EgLVz1Iss8dZfo&callback=initMap"
-async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcKUPXfTnlL8pz41Ns-EgLVz1Iss8dZfo&callback=initMap" async
+        defer></script>
 
-<!-- Add Google Maps -->
-  <!--<script>
+    <!-- Add Google Maps -->
+    <!--<script>
     function myMap()
     {
       myCenter=new google.maps.LatLng(41.878114, -87.629798);
