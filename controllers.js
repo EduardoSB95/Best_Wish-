@@ -33,7 +33,14 @@ app.controller('AuthCtrl', [
 app.controller('ContactController', [
   '$scope',
   '$location',
-  function($scope, $location) {}
+  'NgMap',
+  function($scope, $location, NgMap) {
+    NgMap.getMap().then(function(map) {
+      console.log(map.getCenter());
+      console.log('markers', map.markers);
+      console.log('shapes', map.shapes);
+    });
+  }
 ]);
 
 app.controller('itemsController', [

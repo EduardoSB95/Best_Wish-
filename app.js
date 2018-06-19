@@ -1,6 +1,6 @@
-var app = angular.module('App', ['ngRoute', 'firebase']);
+var app = angular.module('App', ['ngRoute', 'firebase', 'ngMap']);
 
-app.config(function($routeProvider, $locationProvider) {
+app.config(function ($routeProvider, $locationProvider) {
   $routeProvider
     .when('/', {
       templateUrl: 'templates/home.html',
@@ -74,11 +74,11 @@ var computers = [
     image: 'https://picsum.photos/170/88/?random'
   },
   {
-    product: 'Lenovo',
+    product: 'photos',
     info:
       'Info. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam reiciendis',
     price: '9.490kr',
-    image: 'https://picsum.photos/170/88/?random'
+    image: 'https://picsum.photos/200/300/?random'
   },
   {
     product: 'Apple',
@@ -92,74 +92,76 @@ var computers = [
 for (let i = 0; i < cameras.length; i++) {
   $('#product_container1').append(
     '<div class="item"><div class="image"><img id="product_image" src="' +
-      cameras[i].image +
-      '" alt="Something went wrong"></div><div class="text"><p class="name">' +
-      cameras[i].product +
-      '<span class="span1">' +
-      cameras[i].price +
-      '</span></p><p class="info">' +
-      cameras[i].info +
-      '</p></div><div class="btn"><a href="#">Buy</a></div></div>'
+    cameras[i].image +
+    '" alt="Something went wrong"></div><div class="text"><p class="name">' +
+    cameras[i].product +
+    '<span class="span1">' +
+    cameras[i].price +
+    '</span></p><p class="info">' +
+    cameras[i].info +
+    '</p></div><div class="btn"><a href="#">Buy</a></div></div>'
   );
 }
 
 for (let i = 0; i < computers.length; i++) {
   $('#product_container2').append(
     '<div class="item"><div class="image"><img id="product_image" src="' +
-      computers[i].image +
-      '" alt="Something went wrong"></div><div class="text"><p class="name">' +
-      computers[i].product +
-      '<span class="span1">' +
-      cameras[i].price +
-      '</span></p><p class="info">' +
-      computers[i].info +
-      '</p></div><div class="btn"><a href="#">Buy</a></div></div>'
+    computers[i].image +
+    '" alt="Something went wrong"></div><div class="text"><p class="name">' +
+    computers[i].product +
+    '<span class="span1">' +
+    cameras[i].price +
+    '</span></p><p class="info">' +
+    computers[i].info +
+    '</p></div><div class="btn"><a href="#">Buy</a></div></div>'
   );
 }
 for (let i = 0; i < products.length; i++) {
   $('#product_container3').append(
     '<div class="item"><div class="image"><img id="product_image" src="' +
-      products[i].image +
-      '" alt="Something went wrong"></div><div class="text"><p class="name">' +
-      products[i].product +
-      '<span class="span1">' +
-      cameras[i].price +
-      '</span></p><p class="info">' +
-      products[i].info +
-      '</p></div><div class="btn"><a href="#">Buy</a></div></div>'
+    products[i].image +
+    '" alt="Something went wrong"></div><div class="text"><p class="name">' +
+    products[i].product +
+    '<span class="span1">' +
+    cameras[i].price +
+    '</span></p><p class="info">' +
+    products[i].info +
+    '</p></div><div class="btn"><a href="#">Buy</a></div></div>'
   );
 }
 for (let i = 0; i < products.length; i++) {
   $('#product_container4').append(
     '<div class="item"><div class="image"><img id="product_image" src="' +
-      products[i].image +
-      '" alt="Something went wrong"></div><div class="text"><p class="name">' +
-      products[i].product +
-      '<span class="span1">' +
-      cameras[i].price +
-      '</span></p><p class="info">' +
-      products[i].info +
-      '</p></div><div class="btn"><a href="#">Buy</a></div></div>'
+    products[i].image +
+    '" alt="Something went wrong"></div><div class="text"><p class="name">' +
+    products[i].product +
+    '<span class="span1">' +
+    cameras[i].price +
+    '</span></p><p class="info">' +
+    products[i].info +
+    '</p></div><div class="btn"><a href="#">Buy</a></div></div>'
   );
 }
 for (let i = 0; i < products.length; i++) {
   $('#product_container5').append(
     '<div class="item"><div class="image"><img id="product_image" src="' +
-      products[i].image +
-      '" alt="Something went wrong"></div><div class="text"><p class="name">' +
-      products[i].product +
-      '<span class="span1">' +
-      cameras[i].price +
-      '</span></p><p class="info">' +
-      products[i].info +
-      '</p></div><div class="btn"><a href="#">Buy</a></div></div>'
+    products[i].image +
+    '" alt="Something went wrong"></div><div class="text"><p class="name">' +
+    products[i].product +
+    '<span class="span1">' +
+    cameras[i].price +
+    '</span></p><p class="info">' +
+    products[i].info +
+    '</p></div><div class="btn"><a href="#">Buy</a></div></div>'
   );
 }
 
-var map;
-function initMap() {
-  map = new google.maps.Map(document.getElementById('map'), {
-    center: { lat: -34.397, lng: 150.644 },
-    zoom: 8
-  });
+/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+function myFunction() {
+  var x = document.getElementById('myTopnav');
+  if (x.className === 'topnav') {
+    x.className += ' responsive';
+  } else {
+    x.className = 'topnav';
+  }
 }
